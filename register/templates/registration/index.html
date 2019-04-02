@@ -1,0 +1,801 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ABHIVYAKTI 2K19</title>
+		<meta charset="utf-8" />
+		{% load static %}
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		{% load static %}
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+		crossorigin="anonymous">
+		<link rel="stylesheet" href="{% static '/css/main1.css' %}">
+		{% load static %}
+		<link rel="icon" href="{% static 'images/abhivyakti_title.png' %}">
+		{% load static %}
+
+		<noscript><link rel="stylesheet" href="{% static '/css/noscript.css' %}" /></noscript>
+	</head>
+	<body>
+		<!--<div id="particles-js"></div>-->
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<header>
+					<div class="menu-btn" style="z-index:101;position: fixed">
+						<div class="btn-line"></div>
+						<div class="btn-line"></div>
+						<div class="btn-line"></div>
+					</div>
+
+					<nav class="menu">
+						<div class="menu-branding">
+							<div class="potrait"></div>
+						</div>
+						<ul class="menu-nav">
+								<li class="nav-item">
+									<a href="{% url 'register:index' %}" class="nav-link">
+										Home
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="#events" class="nav-link">
+										Events
+									</a>
+								</li>
+
+								<li class="nav-item">
+									<a href="#contact" class="nav-link">
+										Get In Touch
+									</a>
+								</li>
+
+							</ul>
+					</nav>
+				</header>
+				<!-- Intro -->
+					<section class="intro">
+						<header>
+							<h1 style="color:white">Abhivyakti 2k19</h1>
+							<p style="color:white">23rd and 24th February</p>
+							<p style="color:white">A National Level Cultural Fest of IIIT Nagpur.</p>
+							<ul class="actions">
+								<li><a href="#events" class="arrow scrolly"><span class="label">Next</span></a></li>
+							</ul>
+						</header>
+						<div class="content">
+							<span class="image fill" data-position="center"><img src="{% static 'images/6.jpg' %}" alt="" /></span>
+						</div>
+					</section>
+
+				<!-- Section -->
+				<!--	Commented Who are we
+					<section id="first">
+						<header>
+							<h2 style="color:white">Who we Are :)</h2>
+						</header>
+						<div class="content">
+							<br>
+							<p><strong>Lorem ipsum dolor</strong> sit amet consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor amet fermentum. Nullam venenatis erat id vehicula ultrices sed ultricies condimentum. Magna sed etiam consequat, et lorem adipiscing sed nulla. Volutpat nisl et tempus et dolor libero, feugiat magna tempus, sed et lorem adipiscing.</p>
+							<span class="image main"><img src="{% static 'images/logo.png' %}" alt="" /></span>
+						</div>
+					</section>.
+				-->
+                    <br>
+                    <br>
+				    <section id="events">
+								<header>
+									<h2 style="color:white">Schedule</h2>
+								</header>
+								<div class="content">
+
+										<a href="https://drive.google.com/file/d/1mfR88bcucSx0y5s_TZMQTklGxuDBWwGD/view?usp=sharing" target="_blank"><h4><u>Get Schedule here</u></h4></a>
+										<p>*Last Updated at 18 hrs 20th Feb</p>
+										<br>
+										<br>
+                                    <hr>
+								</div>
+					</section>
+					<br>
+
+
+					<section id="events">
+								<header>
+									<h2 style="color:white">Big Roar</h2>
+								</header>
+								<div class="content">
+										<p><strong>The debate competition as part of IIIT Nagpur’s National Level Cultural fest, Abhivyakti. Put forth your views on the given topic and voice out your opinions. Convince the judges about your views on the topic. Make a stand and don’t let your opponent get the better of you!</strong></p>
+										<a href="https://drive.google.com/file/d/1Tc9SqOWIGiARsMnTuxfHBHKfDix9LQqo/view?usp=sharing" target="_blank">Rulebook</a>
+										<br>
+										<br>
+										<button id="collapse-btn-b">Register Now</button>
+										<br>
+										<br>
+
+										<div class="form-registration-b" style="display:none;">
+											<h2 >REGISTER <br><span class="text-secondary" style="font-size: 0.5rem">Limited Seats Only</span></h3>
+											<form action="{% url 'register:submit' event_name="bigroar" %}" class="register-form" method="post">
+												{% csrf_token %}
+												<label for="name">Name</label>
+												<input type="text" placeholder="Enter Your Name Here" class="name" name="name" required>
+												<br>
+												<label for="">College</label>
+												<select value="select" class="college" name="IIITN" required>
+													<option name="iiitn" id="iiitn-value">IIITN</option>
+													<option name="others" id="others-value">Others</option>
+												</select>
+												<br>
+												<label>College or Enrollment Number</label>
+												<input type="text" placeholder="College Name(Other) Or Enrollment Number(IIIT Students)" name="college" required>
+												<br>
+												<label>Email</label>
+												<input type="email" placeholder="Email-ID" name="email" required>
+												<br>
+												<label>Phone No.</label>
+												<input type="tel" placeholder="Phone Number" name="Phone Number" pattern="[0-9]{10}" required>
+												<br>
+												<center><input type="submit" value="Submit" class="submit-form"></center>
+												<br>
+
+											</form>
+
+								</div>
+					</section>
+					<br>
+					<section id="events">
+								<header>
+									<h2 style="color:white">Kavyanjali</h2>
+								</header>
+								<div class="content">
+										<p><strong>Poetry is considered to be one the most impressive and beautiful forms of expressing one’s thoughts and emotions. It's not just about fusing words and rythm,  it's a rythmical creation of beauty in words. So,all the expressive poets get ready to showcase your talent.<br>
+Kavyanjali is a poetry competition of the national level cultural fest for IIIT Nagpur ABHIVYAKTI 2K19</strong></p>
+										<a href="https://drive.google.com/file/d/1DnesccS3BfhIGZfOTlRtnejoSNTp8Fhq/view?usp=sharing" target="_blank">Rulebook</a>
+										<br>
+										<br>
+										<button id="collapse-btn-k">Register Now</button>
+										<br>
+										<br>
+										<div class="form-registration-k" style="display:none;">
+											<h2 >REGISTER <br><span class="text-secondary" style="font-size: 0.5rem">Limited Seats Only</span></h3>
+											<form action="{% url 'register:submit' event_name="kavyanjali" %}" class="register-form" method="post">
+												{% csrf_token %}
+												<label for="name">Name</label>
+												<input type="text" placeholder="Enter Your Name Here" class="name" name="name" required>
+												<br>
+												<label for="">College</label>
+												<select value="select" class="college" name="IIITN" required>
+													<option name="iiitn" id="iiitn-value">IIITN</option>
+													<option name="others" id="others-value">Others</option>
+												</select>
+												<br>
+												<label>College or Enrollment Number</label>
+												<input type="text" placeholder="College Name(Other) Or Enrollment Number(IIIT Students)" name="college" required>
+												<br>
+												<label>Email</label>
+												<input type="email" placeholder="Email-ID" name="email" required>
+												<br>
+												<label>Phone No.</label>
+												<input type="tel" placeholder="Phone Number" name="Phone Number" pattern="[0-9]{10}" required>
+												<br>
+												<center><input type="submit" value="Submit" class="submit-form"></center>
+												<br>
+											</form>
+
+								</div>
+					</section>
+					<br>
+					<section id="events">
+								<header>
+									<h2 style="color:white">Antara</h2>
+								</header>
+								<div class="content">
+										<p><strong> Where words fail, music speaks. And indeed, music has no language and  can enthral audience of all ages. Get ready to showcase your singing talent in Antara – The singing competition.</strong></p>
+										<a href="https://drive.google.com/open?id=1PtO9LgYQ8t3HWl9O9PtwhhOLhL04MX-a" target="_blank">Rulebook</a>
+										<br>
+										<br>
+										<button id="collapse-btn-a">Register Now</button>
+										<br>
+										<br>
+										<div class="form-registration-a" style="display:none;">
+											<h2 >REGISTER <br><span class="text-secondary" style="font-size: 0.5rem">Limited Seats Only</span></h3>
+											<form action="{% url 'register:submit' event_name="antara" %}" class="register-form" method="post">
+												{% csrf_token %}
+												<label for="name">Name</label>
+												<input type="text" placeholder="Enter Your Name Here" class="name" name="name" required>
+												<br>
+												<label for="">College</label>
+												<select value="select" class="college" name="IIITN" required>
+													<option name="iiitn" id="iiitn-value">IIITN</option>
+													<option name="others" id="others-value">Others</option>
+												</select>
+												<br>
+												<label>College or Enrollment Number</label>
+												<input type="text" placeholder="College Name(Other) Or Enrollment Number(IIIT Students)" name="college" required>
+												<br>
+												<label>Email</label>
+												<input type="email" placeholder="Email-ID" name="email" required>
+												<br>
+												<label>Phone No.</label>
+												<input type="tel" placeholder="Phone Number" name="Phone Number" pattern="[0-9]{10}" required>
+												<br>
+												<center><input type="submit" value="Submit" class="submit-form"></center>
+												<br>
+											</form>
+								</div>
+					</section>
+					<br>
+					<section id="events">
+								<header>
+									<h2 style="color:white">Craftix</h2>
+								</header>
+								<div class="content">
+										<p><strong>Presenting Craftix which includes painting, photography and face painting competitions.  So all the artists out there, get ready to showcase your painting skills and amazing photographs through this competition!! </strong></p>
+										<a href="https://drive.google.com/file/d/0B34jJbpdevruTmY1TGx2R2dFbzJBTWdWLV9VcEhkenpGQUpr/view?usp=sharing" target="_blank">Rulebook</a>
+										<br>
+										<br>
+										<button id="collapse-btn-c">Register Now</button>
+										<br>
+										<br>
+										<div class="form-registration-c" style="display:none;">
+											<h2 >REGISTER <br><span class="text-secondary" style="font-size: 0.5rem">Limited Seats Only</span></h3>
+											<form action="{% url 'register:submit' event_name="craftix" %}" class="register-form" method="post">
+												{% csrf_token %}
+												<label for="name">Name</label>
+												<input type="text" placeholder="Enter Your Name Here" class="name" name="name" required>
+												<br>
+												<label for="">Category</label>
+												<select value="select" name="type" required>
+													<option name="Painting" id="iiitn-value">Painting</option>
+													<option name="Photography" id="others-value">Photography</option>
+													<option name="Face Painting" id="others-value">Face Painting</option>
+												</select>
+												<br>
+
+												<label for="">College</label>
+												<select value="select" class="college" name="IIITN" required>
+													<option name="iiitn" id="iiitn-value">IIITN</option>
+													<option name="others" id="others-value">Others</option>
+												</select>
+											<br>
+												<label>College or Enrollment Number</label>
+												<input type="text" placeholder="College Name(Other) Or Enrollment Number(IIIT Students)" name="college" required>
+												<br>
+												<label>Email</label>
+												<input type="email" placeholder="Email-ID" name="email" required>
+												<br>
+												<label>Phone No.</label>
+												<input type="tel" placeholder="Phone Number" name="Phone Number" pattern="[0-9]{10}" required>
+												<br>
+												<center><input type="submit" value="Submit" class="submit-form"></center>
+												<br>
+											</form>
+								</div>
+					</section>
+					<br>
+					<section id="events">
+								<header>
+									<h2 style="color:white">To the Beat</h2>
+								</header>
+								<div class="content">
+										<p><strong>Are you a born dancer? Think you got the right moves? Can impress the audience with your dance? Well….</strong></p>
+											<a href="https://drive.google.com/file/d/1diUpgPNQVJxhmRDihOns9qzqxBMTG_aB/view?usp=sharing" target="_blank">Rulebook</a>
+											<br>
+											<br>
+										<button id="collapse-btn-to">Register Now</button>
+										<br>
+										<br>
+										<div class="form-registration-to" style="display:none;">
+											<h2 >REGISTER <br><span class="text-secondary" style="font-size: 0.5rem">Limited Seats Only</span></h3>
+											<form action="{% url 'register:submit' event_name="tothebeat" %}" class="register-form" method="post">
+												{% csrf_token %}
+												<br>
+												<label for="">Category</label>
+												<select value="select" class="college" name="Category" required>
+													<option name="iiitn" id="iiitn-value">Solo</option>
+													<option name="others" id="others-value">Group</option>
+												</select>
+												<br>
+											    <hr>
+											    <h3> Fill this if Group</h3>
+												<label for="name">Team Name (If GROUP)</label>
+												<input type="text" placeholder="Enter Your Team Name Here" class="name" name="teamname" >
+												<br>
+												<label for="name">Team's Head (If GROUP)</label>
+												<input type="text" placeholder="Enter Your Team Leader's Name Here" class="name" name="name" >
+												<br>
+
+												<br>
+												<hr>
+											    <h3> Fill this if Solo</h3>
+												<label for="name">Your Name</label>
+												<input type="text" placeholder="Enter Your Name Here" class="name" name="_name" >
+												<br>
+
+												<hr>
+
+
+
+
+
+
+												<label for="">College</label>
+												<select value="select" class="college" name="IIITN" required>
+													<option name="iiitn" id="iiitn-value">IIITN</option>
+													<option name="others" id="others-value">Others</option>
+												</select>
+											<br>
+												<label>College or Enrollment Number</label>
+												<input type="text" placeholder="College Name(Other) Or Enrollment Number(IIIT Students)" name="college" required>
+												<br>
+												<label>Email</label>
+												<input type="email" placeholder="Email-ID" name="email" required>
+												<br>
+												<label>Phone No.</label>
+												<input type="tel" placeholder="Phone Number" name="Phone Number" pattern="[0-9]{10}" required>
+												<br>
+												<center><input type="submit" value="Submit" class="submit-form"></center>
+												<br>
+											</form>
+								</div>
+					</section>
+					<br>
+					<section id="events">
+								<header>
+									<h2 style="color:white">Prashna Baan</h2>
+								</header>
+								<div class="content">
+										<p><strong>PrashnaBaan- Literally arrows of questions, a
+										quiz competition, which will test not just your memory but also your knowledge on a wide variety of subjects including
+										current affairs, sports, politics and much more.</strong></p>
+										<a href="https://drive.google.com/file/d/1XZ8vfLgY6CKO01GJ9oVhqmOewOAyCzaI/view?usp=sharing" target="_blank">Rulebook</a>
+										<br>
+										<br>
+										<button id="collapse-btn-p">Register Now</button>
+										<br>
+										<br>
+										<div class="form-registration-p" style="display:none;">
+											<h2 >REGISTER <br><span class="text-secondary" style="font-size: 0.5rem">Limited Seats Only</span></h3>
+											<form action="{% url 'register:submit' event_name="prashnaban" %}" class="register-form" method="post">
+												{% csrf_token %}
+												<label for="name">Member 1</label>
+												<input type="text" placeholder="Enter Your Name Here" class="name" name="name" required>
+												<br>
+												<label for="name">Member 2</label>
+												<input type="text" placeholder="Enter Your Name Here" class="name" name="name1">
+												<br>
+												<label for="name">Member 3</label>
+												<input type="text" placeholder="Enter Your Name Here" class="name" name="name2">
+												<br>
+
+
+												<label for="">College</label>
+												<select value="select" class="college" name="IIITN" required>
+													<option name="iiitn" id="iiitn-value">IIITN</option>
+													<option name="others" id="others-value">Others</option>
+												</select>
+												<br>
+												<label>College or Enrollment Number</label>
+												<input type="text" placeholder="College Name(Other) Or Enrollment Number(IIIT Students)" name="college" required>
+												<br>
+												<label>Email</label>
+												<input type="email" placeholder="Email-ID" name="email" required>
+												<br>
+												<label>Phone No.</label>
+												<input type="tel" placeholder="Phone Number" name="Phone Number" pattern="[0-9]{10}" required>
+												<br>
+												<center><input type="submit" value="Submit" class="submit-form"></center>
+												<br>
+											</form>
+								</div>
+					</section>
+					<br>
+					<section id="events">
+						<header>
+							<h2 style="color:white">Talk Master</h2>
+						</header>
+						<div class="content">
+							<p><strong>Talk Master - The Oratory competiton as part of its National Level Cultural fest, Abhivyakti. Impress the judges and audience with
+							the perfect combination of a good content, the fluency of your language and confident delivery and style. So come
+							forward and show the spark in you!</strong></p>
+							<a href="https://drive.google.com/file/d/1xSUuvapwu1rscCz1S0OsLVY12cnXx4Qv/view?usp=sharing" target="_blank">Rulebook</a>
+							<br>
+							<br>
+							<button id="collapse-btn-t">Register Now</button>
+							<br>
+							<br>
+							<div class="form-registration-t" style="display:none;">
+								<h2>REGISTER <br><span class="text-secondary" style="font-size: 0.5rem">Limited Seats Only</span></h3>
+									<form action="{% url 'register:submit' event_name="talkmaster" %}" class="register-form" method="post">
+										{% csrf_token %}
+										<label for="name">Name</label>
+										<input type="text" placeholder="Enter Your Name Here" class="name" name="name" required>
+										<br>
+										<label for="">College</label>
+										<select value="select" class="college" name="IIITN" required>
+											<option name="iiitn" id="iiitn-value">IIITN</option>
+											<option name="others" id="others-value">Others</option>
+										</select>
+										<br>
+												<label>College or Enrollment Number</label>
+												<input type="text" placeholder="College Name(Other) Or Enrollment Number(IIIT Students)" name="college" required>
+												<br>
+										<label>Email</label>
+										<input type="email" placeholder="Email-ID" name="email" required>
+										<br>
+										<label>Phone No.</label>
+										<input type="tel" placeholder="Phone Number" name="Phone Number" pattern="[0-9]{10}" required>
+										<br>
+										<center><input type="submit" value="Submit" class="submit-form"></center>
+										<br>
+									</form>
+							</div>
+					</section>
+
+					<br>
+					<section id="events">
+								<header>
+									<h2 style="color:white">Vyaktitva</h2>
+								</header>
+								<div class="content">
+										<p><strong>Vyaktitva will test your personality as a whole- on how you speak, present yourself before others and answer the
+										questions posed before you.
+										Bold? Smart? Witty? Funny? Glamorous? What’s your personality?</strong></p>
+										<a href="https://drive.google.com/open?id=0B34jJbpdevrueTNaVlNCUUFmSzJjdlYyQkNrMmdRdjl5b0NN" target="_blank">Rulebook</a>
+										<br>
+										<br>
+										<button id="collapse-btn-v">Register Now</button>
+										<br>
+										<br>
+										<div class="form-registration-v" style="display:none;">
+											<h2 >REGISTER <br><span class="text-secondary" style="font-size: 0.5rem">Limited Seats Only</span></h3>
+											<form action="{% url 'register:submit' event_name="vyaktitva" %}" class="register-form" method="post">
+												{% csrf_token %}
+												<label for="name">Name</label>
+												<input type="text" placeholder="Enter Your Name Here" class="name" name="name" required>
+												<br>
+												<label for="">College</label>
+												<select value="select" class="college" name="IIITN" required>
+													<option name="iiitn" id="iiitn-value">IIITN</option>
+													<option name="others" id="others-value">Others</option>
+												</select>
+												<br>
+												<label>College or Enrollment Number</label>
+												<input type="text" placeholder="College Name(Other) Or Enrollment Number(IIIT Students)" name="college" required>
+												<br>
+												<label>Email</label>
+												<input type="email" placeholder="Email-ID" name="email" required>
+												<br>
+												<label>Phone No.</label>
+												<input type="tel" placeholder="Phone Number" name="Phone Number" pattern="[0-9]{10}" required>
+												<br>
+												<center><input type="submit" value="Submit" class="submit-form"></center>
+												<br>
+											</form>
+								</div>
+					</section>
+					<br>
+					<section id="events">
+								<header>
+									<h2 style="color:white">Abhivyakti Got Talent</h2>
+								</header>
+								<div class="content">
+										<p><strong>Think you have a hidden talent? Perhaps a dancer, a singer, a magician, an actor, standup comedian or anything else?
+										Then don’t miss this one as IIIT Nagpur presents, with the tagline of “Opportunity knocks at your door but once” -
+										Abhivyakti’s Got Talent, as part of its National Level Cultural fest, Abhivyakti.</strong></p>
+										<a href="https://drive.google.com/file/d/1-1SwyX-9d3QTbF1IYc8tGwU9jWj76kxa/view?usp=sharing" target="_blank">Rulebook</a>
+										<br>
+										<br>
+										<button id="collapse-btn-agt">Register Now</button>
+										<br>
+										<br>
+										<div class="form-registration-agt" style="display:none;">
+											<h2 >REGISTER <br><span class="text-secondary" style="font-size: 0.5rem">Limited Seats Only</span></h3>
+											<form action="{% url 'register:submit' event_name="abhivyakti_got_talent" %}" class="register-form" method="post">
+												{% csrf_token %}
+												<label for="name">Name</label>
+												<input type="text" placeholder="Enter Your Name Here" class="name" name="name" required>
+												<br>
+												<label for="">College</label>
+												<select value="select" class="college" name="IIITN" required>
+													<option name="iiitn" id="iiitn-value">IIITN</option>
+													<option name="others" id="others-value">Others</option>
+												</select>
+												<br>
+												<label>College or Enrollment Number</label>
+												<input type="text" placeholder="College Name(Other) Or Enrollment Number(IIIT Students)" name="college" required>
+												<br>
+												<label>Email</label>
+												<input type="email" placeholder="Email-ID" name="email" required>
+												<br>
+												<label>Phone No.</label>
+												<input type="tel" placeholder="Phone Number" name="Phone Number" pattern="[0-9]{10}" required>
+												<br>
+												<center><input type="submit" value="Submit" class="submit-form" required></center>
+												<br>
+											</form>
+								</div>
+					</section>
+
+					<section id="events">
+
+				        <header>
+							<h2 style="color:white">Tabla Guy</h2>
+					    </header>
+				        <div class="content">
+
+				            <b><p>Popularly known as the ‘The Tabla Guy’, Nikhil Paralikar, a performer, composer and percussionist is coming in Abhivyakti 2019, IIIT Nagpur. Nikhil has performed at the “Living Talent” at Dubai. He has enchanted audience everywhere and has also been appreciated by the likes of Armaan Malik, Arijit Singh and Ash king.</p></b>
+
+						    <a href="http://bit.ly/Abhivyakti2019Register" target="_blank">Register Now</a>
+                            <br>
+                            <br>
+
+
+					    </div>
+
+					</section>
+
+
+
+				<section id="events">
+
+				    <header>
+							<h2 style="color:white">Payment Methods</h2>
+					</header>
+				    <div class="content">
+						    <div>
+						        <p>Pay With Paytm</p>
+						        <center>
+						            <img src="{% static 'images/paytm.jpg' %}" style="height:150px;width:150px">
+
+						        </center>
+						    </div>
+						    <div>
+						        <p>Pay With PhonePe</p>
+						        <center>
+						            <img src="{% static 'images/phonepe.jpg' %}" style="height:320px;width:250px">
+
+						        </center>
+						    </div>
+						    <div>
+						        <p>Pay With UPI</p>
+						        <center>
+						            <img src="{% static 'images/upi.jpg' %}" style="height:320px;width:250px">
+
+						        </center>
+						    </div>
+						    <h6>Add Comment while making payment as</h6>
+						    <h5>"&lt;name&gt;, &lt;event_name&gt;"</h5>
+						</div>
+						</section>
+
+
+				<!-- Section -->
+				<br>
+					<section id="contact">
+						<header>
+							<h2 style="color:#fff">Get in touch</h2>
+						</header>
+						<div class="content">
+							<h2>FeedBack</h2>
+							<form action="{% url 'register:feedback' %}" method="POST">
+							    {% csrf_token %}
+								<div class="fields">
+									<div class="field half">
+										<input type="text" name="name" id="name" placeholder="Name"  required/>
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" required/>
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message" rows="7" required></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="button primary" /></li>
+								</ul>
+							</form>
+						</div>
+
+
+						<footer>
+							<ul class="items">
+								<li>
+									<h3>Email</h3>
+									<p>abhivyakti.iiitn@gmail.com</p>
+								</li>
+								<li>
+									<h3>Phone</h3>
+									<p>Prince Pathak - 8600183279</p>
+								</li>
+								<li>
+									<h3>Address</h3>
+									<span>IIIT Nagpur, Seminary Hills Nagpur, Maharastra-440006</span>
+								</li>
+								<li>
+									<h3>Social Media</h3>
+									<ul class="icons">
+										<li><a href="http://fb.com/abhivyakti.iiitn" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
+										<li><a href="http://instagr.am/abhivyakti_iiitn" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+									</ul>
+								</li>
+							</ul>
+							<hr>
+                            <b><i>Innovation Eternity</i></b>
+						</footer>
+					</section>
+
+				<!-- Copyright -->
+			</div>
+
+		<!-- Scripts -->
+
+			<script src="{% static '/js/jquery.min.js' %}"></script>
+
+			<script src="{% static '/js/browser.min.js' %}"></script>
+
+			<script src="{% static '/js/breakpoints.min.js' %}"></script>
+
+			<script src="{% static '/js/main.js' %}"></script>
+			<script>
+			  //Form Registration Query
+
+
+
+
+				$(".college").on("click", function(){
+					var clicked = $(this).children("option:selected").text();
+					if(clicked==="IIITN"){
+						$(".enroll").css("display","block");
+						$(".college-name").css("display", "none");
+					}
+					else{
+						$(".college-name").css("display", "block");
+						$(".enroll").css("display","none");
+					}
+				});
+				$("#t-o-p").on("click", function(){
+					if($("#t-o-p option:selected").text()=="Group"){
+						$(".team-name").css("display","block");
+					}
+					else{
+						$(".team-name").css("display","none");
+					}
+				});
+
+				//Collapse Button
+				$("#collapse-btn-b").on("click", function(){
+					if($(this).text()=="Register Now"){
+					$(this).text("Close");
+					}
+					else{
+						$(this).text("Register Now");
+					}
+					$(".form-registration-b").slideToggle(300);
+					$('section').each(function(){
+
+					});
+				});
+				$("#collapse-btn-k").on("click", function(){
+					if($(this).text()=="Register Now"){
+					$(this).text("Close");
+					}
+					else{
+						$(this).text("Register Now");
+					}
+					$(".form-registration-k").slideToggle(300);
+				});
+				$("#collapse-btn-t").on("click", function(){
+					if($(this).text()=="Register Now"){
+					$(this).text("Close");
+					}
+					else{
+						$(this).text("Register Now");
+					}
+					$(".form-registration-t").slideToggle(300);
+				});
+				$("#collapse-btn-a").on("click", function(){
+					if($(this).text()=="Register Now"){
+					$(this).text("Close");
+					}
+					else{
+						$(this).text("Register Now");
+					}
+					$(".form-registration-a").slideToggle(300);
+				});
+				$("#collapse-btn-c").on("click", function(){
+					if($(this).text()=="Register Now"){
+					$(this).text("Close");
+					}
+					else{
+						$(this).text("Register Now");
+					}
+					$(".form-registration-c").slideToggle(300);
+				});
+				$("#collapse-btn-to").on("click", function(){
+					if($(this).text()=="Register Now"){
+					$(this).text("Close");
+					}
+					else{
+						$(this).text("Register Now");
+					}
+					$(".form-registration-to").slideToggle(300);
+				});
+				$("#collapse-btn-p").on("click", function(){
+					if($(this).text()=="Register Now"){
+					$(this).text("Close");
+					}
+					else{
+						$(this).text("Register Now");
+					}
+					$(".form-registration-p").slideToggle(300);
+				});
+				$("#collapse-btn-v").on("click", function(){
+					if($(this).text()=="Register Now"){
+					$(this).text("Close");
+					}
+					else{
+						$(this).text("Register Now");
+					}
+					$(".form-registration-v").slideToggle(300);
+				});
+				$("#collapse-btn-agt").on("click", function(){
+					if($(this).text()=="Register Now"){
+					$(this).text("Close");
+					}
+					else{
+						$(this).text("Register Now");
+					}
+					$(".form-registration-agt").slideToggle(300);
+				});
+			// Select DOM Items
+			const menuBtn = document.querySelector('.menu-btn');
+			const menu = document.querySelector('.menu');
+			const menuNav = document.querySelector('.menu-nav');
+			const menuBranding = document.querySelector('.menu-branding');
+			const navItems = document.querySelectorAll('.nav-item');
+
+
+
+			//Set Initial State of Menu
+
+			let showMenu = false;
+
+
+			menuBtn.addEventListener('click', toggleMenu);
+			$(navItems).on('click',collapseMenu);
+
+			function toggleMenu() {
+				if (!showMenu) {
+					menuBtn.classList.add('close');
+					menu.classList.add('show');
+					menuNav.classList.add('show');
+					menuBranding.classList.add('show');
+					navItems.forEach(item => item.classList.add('show'));
+
+					//Set Menu State
+					showMenu = true;
+				} else {
+					menuBtn.classList.remove('close');
+					menu.classList.remove('show');
+					menuNav.classList.remove('show');
+					menuBranding.classList.remove('show');
+					navItems.forEach(item => item.classList.remove('show'));
+
+
+					//Set Menu State
+					showMenu = false;
+				}
+			}
+			function collapseMenu(){
+				menuBtn.classList.remove('close');
+					menu.classList.remove('show');
+					menuNav.classList.remove('show');
+					menuBranding.classList.remove('show');
+					navItems.forEach(item => item.classList.remove('show'));
+
+
+					//Set Menu State
+					showMenu = false;
+			}
+    </script>
+	</body>
+</html>

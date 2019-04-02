@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <link rel="icon" href="{% static 'img/abhivyakti_title.png' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Abhivyakti</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Sarpanch" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+        crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/main.css' %}">
+</head>
+
+<body class="body-content" style="background: url('{% static "img/3.jpg" %}');background-attachment: fixed;background-position: bottom right">
+    <header>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+            <div class="menu-branding">
+                <div class="potrait"></div>
+            </div>
+            <ul class="menu-nav">
+                <li class="nav-item current">
+                    <a href="{% url 'register:index' %}" class="nav-link">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'register:bigroar' %}" class="nav-link">
+                        Big Roar
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'register:kavyanjali' %}" class="nav-link">
+                        Kavyanjali
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'register:talkmaster' %}" class="nav-link">
+                        Talk Master
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'register:anatara' %}" class="nav-link">
+                        Antara
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'register:craftix' %}" class="nav-link">
+                        Craftix
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'register:tothebeat' %}" class="nav-link">
+                        To the Beat
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'register:prashnaban' %}" class="nav-link">
+                        PrashnaBaan
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'register:vyaktitva' %}" class="nav-link">
+                        Vyaktitva
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'register:abhivyaktigottalent' %}" class="nav-link">
+                        Abhivyakti Got Talent
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        </header>
+
+
+    <main id="home mt-9">
+        <h1 class="lg-heading">
+            Abhivyakti Got <span class="text-secondary">Talent</span> 
+        </h1>
+        <h2 class="sm-heading">
+           Talented Stuff!! <span class="text-secondary">!!!</span>
+        </h2>
+        <div class="about-info">
+
+            <img src="{% static 'img/7.jpg' %}" alt="My_Picture" class="bio-image">
+
+            <div class="bio">
+                <h3 class="text-secondary">Abhivyakti Got Talent #01</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi eaque rerum cumque, quos nihil dolores. Debitis amet sequi recusandae ipsam animi voluptas dolor eum quaerat quam commodi? Et dicta fuga amet. Ea consectetur neque consequuntur voluptas ipsa quibusdam incidunt deleniti.</p>
+            </div>
+
+            <div class="job job-1">
+                <h3 class="register-heading">Register <br><span class="text-secondary" style="font-size: 0.7rem">Limited Seats Only...</span></h3>
+                <form action="{% url 'register:submit' event_name="abhivyakti_got_talent" %}" class="register-form" method="post">
+                    {% csrf_token %}
+                    <p>Name</p>
+                    <input type="text" placeholder="Enter Your Name Here.." name="name" required>
+                    <p>College</p>
+                    <select value="select" class="college" name="IIITN" required>
+                        <option name="iiitn" id="iiitn-value">IIITN</option>
+                        <option name="others" id="others-value">Others</option>
+                    </select>
+                    <div class="enroll">
+                        <p>Enrollment No.</p>
+                        <input type="text" placeholder="Your Enrollment No. Please.." name="enrollment_no" required>
+                    </div>
+                    <div class="college-name" style="display: none">
+                        <p>Enter Your College Name</p>
+                        <input type="text" placeholder="Which College.." name="college">
+                    </div>
+                    <p>Email</p>
+                    <input type="email" placeholder="Email Please.." name="email">
+                    <p>Phone No.</p>
+                    <input type="text" placeholder="Phone Number too..." name="Phone Number" required>
+                    <br>
+                    <input type="submit" value="Submit" class="submit-form">
+                    <br>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <footer id="main-footer">
+        Copyright IIITN &copy; 2019
+        <div class="icons">
+                <a href="{% url 'register:contact' %}">
+                    <i class="fas fa-phone fa-3x" aria-hidden="true" ></i>
+                </a>
+                <a href="http://instagr.am/abhivyakti_iiitn" target="_blank">
+                    <i class="fab fa-instagram fa-3x"></i>
+                </a>
+                <a href="http://fb.com/abhivyakti.iiitn" target="_blank">
+                    <i class="fab fa-facebook fa-3x"></i>
+                </a>
+            </div>
+    </footer>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    {% load static %}
+    <script src="{% static '/js/main.js' %}"></script>
+</body>
+
+</html>
